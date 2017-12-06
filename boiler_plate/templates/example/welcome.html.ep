@@ -1,0 +1,11 @@
+% layout 'default';
+% title 'Welcome';
+<h2><%= $msg %></h2>
+<p>
+  <%= $ver %>
+</p>
+<ul>
+% for my $user (@$users) {
+   <li><%= $user->{id} %> : <%= $user->{email} %></li>
+%}
+</ul>

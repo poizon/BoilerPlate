@@ -1,23 +1,27 @@
 # BoilerPlate
-Boilerplate project for Mojolicious
+  Boilerplate project for Mojolicious
 
-# Intro
+## Intro
 
-# Run via carton 
+#### Run via carton 
 
+```
 carton exec morbo boiler_plate/script/boiler_plate -l "http://*:9000" -w boiler_plate/*
+```
 
-# Now available in browser
-
+#### Now available in browser
+```
 http://localhost:9000/
+```
+#### If Carton not installed
 
-
-# If Carton not installed
-
+```
 cpanm Carton
+```
 
-# Systemd unit for hypnotoad
+#### Systemd unit for hypnotoad
 
+```
 [Unit]
 Description=BoilerPlate App
 After=network.target
@@ -35,10 +39,11 @@ KillMode=process
 
 [Install]
 WantedBy=multi-user.target
+```
 
+#### Systemd unit for minion 
 
-# Systemd unit for minion 
-
+```
 [Unit]
 Description=MarketPlace application workers
 After=mysql.service
@@ -52,3 +57,4 @@ KillMode=process
 
 [Install]
 WantedBy=multi-user.target
+```
